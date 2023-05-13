@@ -24,6 +24,7 @@
     "seed"
   ],
   "dependencies": {
+    "gsap": "^3.11.5",
     "pixi.js": "^6.0.4"
   },
   "devDependencies": {

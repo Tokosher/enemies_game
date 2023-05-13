@@ -1,20 +1,16 @@
 [
   { "name": "enemy",
-    "spritePath": "assets/enemy.png",
     "components": [
-      { "name": "health", "value": 100 },
-      { "name": "attack", "power": 10 }
+      { "name": "direction", "value": "back" }
     ],
     "position": {
-      "x": 30,
-      "y": 30
+      "x": 50,
+      "y": 300
     }
   },
   { "name": "enemy",
-    "spritePath": "assets/enemy.png",
     "components": [
-      { "name": "health", "value": 100 },
-      { "name": "attack", "power": 20 }
+      { "name": "direction", "value": "right" }
     ],
     "position": {
       "x": 30,
@@ -22,10 +18,8 @@
     }
   },
   { "name": "enemy",
-    "spritePath": "assets/enemy.png",
     "components": [
-      { "name": "health", "value": 100 },
-      { "name": "attack", "power": 20 }
+      { "name": "direction", "value": "back" }
     ],
     "position": {
       "x": 800,
@@ -33,10 +27,8 @@
     }
   },
   { "name": "enemy",
-    "spritePath": "assets/enemy.png",
     "components": [
-      { "name": "health", "value": 100 },
-      { "name": "attack", "power": 10 }
+      { "name": "direction", "value": "left" }
     ],
     "position": {
       "x": 800,
@@ -44,10 +36,8 @@
     }
   },
   { "name": "boss",
-    "spritePath": "assets/boss.png",
     "components": [
-      { "name": "health", "value": 250 },
-      { "name": "attack", "power": 25 }
+      { "name": "direction", "value": "back" }
     ],
     "position": {
       "x": 500,

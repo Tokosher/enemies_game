@@ -1,21 +1,19 @@
-// TODO ADD A BORDER BLOCK AND COLLISION
 // FIX THE PROBLEM WITH RIGHT MOVING CHARACTER
 // todo add page on github
 import * as PIXI from 'pixi.js';
-
-const WIDTH = 600;
-const HEIGHT = 600;
+import { Constants } from './utils/utils';
+import {Enemy} from "./components/enemy";
 
 const app = new PIXI.Application({
-    width: WIDTH,
-    height: HEIGHT,
+    width: Constants.WIDTH,
+    height: Constants.HEIGHT,
     backgroundColor: 0x1099bb, // light blue
     sharedTicker: true,
     sharedLoader: true,
 });
 document.body.appendChild(app.view);
 
-const data = require('./data/enemies.json'); // enemies data
+const enemiesData = require('./data/enemies.json'); // enemies data
 const loader = PIXI.Loader.shared;
 
 // adding a background // todo make a separate class for that
@@ -34,27 +32,18 @@ function onBackgroundLoaded (loader, resources) {
 //     sprite.position.set(200, 200);
 //     app.stage.addChild(sprite);
 // }
-loader.add('tileset', './assets/img/enemy/enemy-spritesheet.json')
+loader.add('tileset', './assets/img/spritesheet.json')
     .add('background', './assets/background.png')
     .load(onload);
 
 function onload (loader, resources) {
+    // adding a background todo move to separate class / function
     const texture = resources.background.texture;
     const background = new PIXI.Sprite(texture);
     addChild(background);
 
-    const textures = [];
-    for (let i = 0; i < 3; i++) {
-        textures.push(PIXI.Texture.from(`left-step${i+1}.png`))
-    }
-
-    const enemy = new PIXI.AnimatedSprite(textures);
-    // enemy.position.set(200, 200);
-    enemy.scale.set(2, 2);
-    app.stage.addChild(enemy);
-
-    enemy.play();
-    enemy.animationSpeed = 0.1;
+    const enemy = new Enemy(enemiesData[0])
+    addChild(enemy);
 }
 
 
