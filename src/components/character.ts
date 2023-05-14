@@ -3,6 +3,8 @@ import {Container} from "pixi.js";
 export interface CharacterData {
     name: 'boss' | 'enemy' | 'hero',
     components: Array<EnemyComponentData>,
+    movingRange: number,
+    // todo вынести позишн отдельно, будем создавать BaseVisualElement
     position: {
         x: number,
         y: number

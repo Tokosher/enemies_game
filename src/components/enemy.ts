@@ -6,7 +6,7 @@ import {Constants} from "../utils/utils";
 // todo review all function return values
 
 type Directions = 'forward' | 'right' | 'back' | 'left';
-
+// left forward bug
 export class Enemy extends Character {
     protected forwardMotionAnimationPack: PIXI.Texture[] = [];
     protected rightMotionAnimationPack: PIXI.Texture[] = [];
@@ -15,17 +15,31 @@ export class Enemy extends Character {
 
     protected character: PIXI.AnimatedSprite;
     protected currentDirection: Directions;
+    protected movingRange: number;
+    protected tween: gsap.core.Tween;
 
     constructor(data: CharacterData) {
         super();
-        const { components, position } = data;
+        const { components, position, movingRange } = data;
 
-        this.createCharacter(components);
+        this.movingRange = movingRange;
         this.positionCharacter(position);
+        this.createCharacter(components);
     }
 
     // todo не нравится, что тут текстур фром кастомные имена вручную пишутся, передать префикс лучше и тут будет основная часть
     // todo подумать может вынести в класс Керектер
+
+    public kill () {
+        this.forwardMotionAnimationPack = null;
+        this.rightMotionAnimationPack = null;
+        this.backMotionAnimationPack = null;
+        this.leftMotionAnimationPack = null;
+        this.character = null;
+        this.tween.kill();
+        this.tween = null;
+    }
+
     protected createCharacter (data: CharacterData["components"]) {
         for (let i = 0; i < Constants.ANIMATION_STEP_AMOUNT; i++) {
             this.forwardMotionAnimationPack.push(PIXI.Texture.from(`forward-step${i+1}.png`))
@@ -54,21 +68,22 @@ export class Enemy extends Character {
 
         switch (value) {
             case 'forward':
-                gsap.to(this, {
-                    y: 100, // todo add animation movement data to json
+                this.tween = gsap.to(this, { // todo remove
+                    y: this.y -  this.movingRange, // todo add animation movement data to json
                     duration: Constants.ANIMATION_DURATION,
                     ease: "none",
                     repeat: -1,
                     yoyo: true,
                     onRepeat: () => {
-                        this.changeDirection(this.currentDirection === 'forward' ? 'back': 'forward')
+                        this.changeDirection(this.currentDirection === 'forward' ? 'back': 'forward') // todo может есть способ лучше?
                     }
                 })
+
                 break;
 
             case 'right':
-                gsap.to(this, {
-                    x: 100, // todo add animation movement data to json
+                this.tween = gsap.to(this, {
+                    x: this.x + this.movingRange, // todo add animation movement data to json
                     duration: Constants.ANIMATION_DURATION,
                     ease: "none",
                     repeat: -1,
@@ -80,8 +95,8 @@ export class Enemy extends Character {
                 break;
 
             case 'back':
-                gsap.to(this, {
-                    y: 500, // todo add animation movement data to json
+                this.tween = gsap.to(this, {
+                    y: this.y + this.movingRange, // todo add animation movement data to json
                     duration: Constants.ANIMATION_DURATION,
                     ease: "none",
                     repeat: -1,
@@ -93,8 +108,8 @@ export class Enemy extends Character {
                 break;
 
             case 'left':
-                gsap.to(this, {
-                    x: 0, // todo add animation movement data to json
+                this.tween = gsap.to(this, {
+                    x: this.x - this.movingRange,
                     duration: Constants.ANIMATION_DURATION,
                     ease: "none",
                     repeat: -1,
@@ -105,9 +120,9 @@ export class Enemy extends Character {
                 })
                 break;
 
-                // todo add circle
+                // todo add circle animation
                 // add radius of circle animation to json data
-            // case 'circle':
+                // case 'circle':
 
         }
 

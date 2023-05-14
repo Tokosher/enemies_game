@@ -2,25 +2,27 @@
 // todo add page on github
 import * as PIXI from 'pixi.js';
 import { Constants } from './utils/utils';
-import {Enemy} from "./components/enemy";
+import { Enemy } from './components/enemy';
+import { EnemiesController } from './components/enemies-controller';
 
 const app = new PIXI.Application({
-    width: Constants.WIDTH,
-    height: Constants.HEIGHT,
-    backgroundColor: 0x1099bb, // light blue
-    sharedTicker: true,
-    sharedLoader: true,
+  width: Constants.WIDTH,
+  height: Constants.HEIGHT,
+  backgroundColor: 0x1099bb, // light blue
+  sharedTicker: true,
+  sharedLoader: true,
 });
 document.body.appendChild(app.view);
 
-const enemiesData = require('./data/enemies.json'); // enemies data
+const enemiesData = require('./data/enemies.json');
+// enemies data
 const loader = PIXI.Loader.shared;
 
 // adding a background // todo make a separate class for that
 // loader.add('background', './assets/background.png'); // todo add Names space with enemies / background
 // loader.load(onBackgroundLoaded);
 
-function onBackgroundLoaded (loader, resources) {
+function onBackgroundLoaded(loader, resources) {
 
 }
 // loader.add('tileset', './assets/img/spritesheet.json')
@@ -33,21 +35,33 @@ function onBackgroundLoaded (loader, resources) {
 //     app.stage.addChild(sprite);
 // }
 loader.add('tileset', './assets/img/spritesheet.json')
-    .add('background', './assets/background.png')
-    .load(onload);
+  .add('background', './assets/background.png')
+  .add('Desyrel', './assets/fonts/desyrel.xml')
+  .load(onload);
 
-function onload (loader, resources) {
-    // adding a background todo move to separate class / function
-    const texture = resources.background.texture;
-    const background = new PIXI.Sprite(texture);
-    addChild(background);
+function onload(loader, resources) {
+  // adding a background todo move to separate class / function
+  const { texture } = resources.background;
+  const background = new PIXI.Sprite(texture);
+  addChild(background);
+  console.log(enemiesData);
+  const enemies = [];
 
-    const enemy = new Enemy(enemiesData[0])
+  enemiesData.forEach(enemyData => {
+    const enemy = new Enemy(enemyData);
     addChild(enemy);
+    enemies.push(enemy);
+  })
+
+  new EnemiesController({
+    enemies,
+    app
+  })
+  // const enemy = new Enemy(enemiesData[0]);
+  // addChild(enemy);
 }
 
-
 // utils
-function addChild (child) {
-    app.stage.addChild(child);
+function addChild(child) {
+  app.stage.addChild(child);
 }
