@@ -1,9 +1,10 @@
 import * as PIXI from 'pixi.js';
 import { Constants } from './utils/utils';
 import { Enemy } from './components/enemy';
-import { EnemiesController } from './components/enemies-controller';
+import { EnemiesController } from './components/controllers/enemies-controller';
 import { REQUIRED_DATA_FOR_LOADER } from './utils/utils'
-
+import { Counter } from './components/enemies-counter';
+// todo чекнуть импорты
 const app = createApplication();
 document.body.appendChild(app.view);
 
@@ -14,14 +15,13 @@ const enemiesData = require('./data/enemies.json');
 loadRequiredData(onload);
 
 function onload(loader, resources) {
-
   // background creating
   if (resources.background) {
     const { texture } = resources.background;
     createBackground(texture);
   }
 
-  // Enemies creating // todo I stopped here
+  // Enemies creating
   const enemies = [];
 
   enemiesData.forEach(enemyData => {
@@ -30,11 +30,24 @@ function onload(loader, resources) {
     enemies.push(enemy);
   })
 
-  // Enemies counter creating
-  new EnemiesController({
+  // Enemies controller creating
+  const enemiesControllerObject = new EnemiesController({
     enemies,
-    app
+    app,
+    onEnemyKill
   })
+
+  // Enemies counter creating
+  const enemyCounter = new Counter({
+    amount: enemies.length,
+    prefix: Constants.textBeforeEnemiesCounter,
+    position: Constants.enemyCounterPosition
+  })
+  addChild(enemyCounter);
+
+  function onEnemyKill () {
+    enemyCounter.textAmount = enemiesControllerObject.enemyAmount;
+  }
 }
 
 function createApplication () {

@@ -1,15 +1,10 @@
-import * as PIXI from 'pixi.js';
 import gsap from 'gsap';
-import {Character, CharacterData, EnemyComponentData} from "./character";
-import {Constants} from "../utils/utils";
-import { Container } from 'pixi.js';
-
-// todo review all function return values
+import { Character, CharacterData } from './character';
+import { Constants } from '../utils/utils';
 
 type Directions = 'forward' | 'right' | 'back' | 'left';
-// left forward bug
-export class Enemy extends Character {
 
+export class Enemy extends Character {
     protected currentDirection: Directions;
     protected movingRange: number;
     protected tween: gsap.core.Tween;
@@ -19,11 +14,11 @@ export class Enemy extends Character {
         const { position, movingRange } = data;
 
         this.movingRange = movingRange;
-        this.positionCharacter(position);
+        this.onPosition(position);
         this.createCharacter(data);
     }
 
-    public kill () {
+    public kill (): void {
         this.forwardMotionAnimationPack = null;
         this.rightMotionAnimationPack = null;
         this.backMotionAnimationPack = null;
@@ -33,7 +28,7 @@ export class Enemy extends Character {
         this.tween = null;
     }
 
-    protected createCharacter (data: CharacterData) {
+    protected createCharacter (data: CharacterData): void {
         super.createCharacter(data);
 
         data.components.forEach(property => {
@@ -45,19 +40,19 @@ export class Enemy extends Character {
         })
     }
 
-    protected makeDirectionAnimation (value: Directions) {
+    protected makeDirectionAnimation (value: Directions): void {
         this.changeDirection(value);
 
         switch (value) {
             case 'forward':
-                this.tween = gsap.to(this, { // todo remove
-                    y: this.y -  this.movingRange, // todo add animation movement data to json
+                this.tween = gsap.to(this, {
+                    y: this.y -  this.movingRange,
                     duration: Constants.ANIMATION_DURATION,
                     ease: "none",
                     repeat: -1,
                     yoyo: true,
                     onRepeat: () => {
-                        this.changeDirection(this.currentDirection === 'forward' ? 'back': 'forward') // todo может есть способ лучше?
+                        this.changeDirection(this.currentDirection === 'forward' ? 'back': 'forward')
                     }
                 })
 
@@ -65,7 +60,7 @@ export class Enemy extends Character {
 
             case 'right':
                 this.tween = gsap.to(this, {
-                    x: this.x + this.movingRange, // todo add animation movement data to json
+                    x: this.x + this.movingRange,
                     duration: Constants.ANIMATION_DURATION,
                     ease: "none",
                     repeat: -1,
@@ -78,7 +73,7 @@ export class Enemy extends Character {
 
             case 'back':
                 this.tween = gsap.to(this, {
-                    y: this.y + this.movingRange, // todo add animation movement data to json
+                    y: this.y + this.movingRange,
                     duration: Constants.ANIMATION_DURATION,
                     ease: "none",
                     repeat: -1,
@@ -101,17 +96,12 @@ export class Enemy extends Character {
                     }
                 })
                 break;
-
-                // todo add circle animation
-                // add radius of circle animation to json data
-                // case 'circle':
-
         }
 
         this.character.play();
     }
 
-    protected changeDirection (direction: Directions) {
+    protected changeDirection (direction: Directions): void {
         if (this.currentDirection === direction) {
             return
         }
@@ -138,5 +128,4 @@ export class Enemy extends Character {
 
         this.character.play();
     }
-
 }

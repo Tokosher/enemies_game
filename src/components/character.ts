@@ -1,25 +1,20 @@
-import {Container} from "pixi.js";
-import { Constants } from '../utils/utils';
+import { Constants, PositionData } from '../utils/utils';
 import * as PIXI from 'pixi.js';
-
-interface PositionData {
-    x: number,
-    y: number
-}
-
+import { BaseVisualElement } from './base-visual-element';
+// todo дать возможность задать анимку разную по скорости для каждого перса и скейл добавить тоже для перса
 export interface CharacterData {
     name: 'boss' | 'enemy',
-    components: Array<EnemyComponentData>,
+    components: Array<CharacterComponentData>,
     movingRange: number,
     position: PositionData
 }
 
-export type EnemyComponentData = {
+type CharacterComponentData = {
     name: string,
     value: string | number
 }
 
-export abstract class Character extends Container {
+export abstract class Character extends BaseVisualElement {
     protected forwardMotionAnimationPack: PIXI.Texture[] = [];
     protected rightMotionAnimationPack: PIXI.Texture[] = [];
     protected backMotionAnimationPack: PIXI.Texture[] = [];
@@ -27,14 +22,12 @@ export abstract class Character extends Container {
 
     protected character: PIXI.AnimatedSprite;
 
-    protected positionCharacter (position: CharacterData["position"]) {
-        const { x, y } = position;
-        this.x = x;
-        this.y = y;
-    }
-
-    // todo не нравится, что тут текстур фром кастомные имена вручную пишутся, передать префикс лучше и тут будет основная часть
-    protected createCharacter (data: CharacterData) {
+    /**
+     * Creating character and using forward animation by default
+     * @param data
+     * @protected
+     */
+    protected createCharacter (data: CharacterData): void {
         const prefix = data.name;
 
         for (let i = 0; i < Constants.ANIMATION_STEP_AMOUNT; i++) {
@@ -44,8 +37,7 @@ export abstract class Character extends Container {
             this.backMotionAnimationPack.push(PIXI.Texture.from(`${prefix}-back-step${i+1}.png`))
         }
 
-        this.character = new PIXI.AnimatedSprite(this.forwardMotionAnimationPack); // we should add any pack
-        this.character.scale.set(2, 2); // todo remove
+        this.character = new PIXI.AnimatedSprite(this.forwardMotionAnimationPack); // we should add any pack for success creating AnimatedSprite
         this.addChild(this.character);
 
         this.character.animationSpeed = Constants.ANIMATION_SPEED;
