@@ -1,11 +1,11 @@
 {
 	"frames": {
-		"back-step1.png": {
+		"boss-back-step1.png": {
 			"frame": {
 				"x": 1,
 				"y": 1,
 				"w": 32,
-				"h": 47
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
@@ -13,79 +13,19 @@
 				"x": 0,
 				"y": 0,
 				"w": 32,
-				"h": 47
+				"h": 34
 			},
 			"sourceSize": {
 				"w": 32,
-				"h": 47
-			}
-		},
-		"back-step2.png": {
-			"frame": {
-				"x": 35,
-				"y": 1,
-				"w": 32,
-				"h": 47
-			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 32,
-				"h": 47
-			},
-			"sourceSize": {
-				"w": 32,
-				"h": 47
-			}
-		},
-		"back-step3.png": {
-			"frame": {
-				"x": 69,
-				"y": 1,
-				"w": 32,
-				"h": 47
-			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 32,
-				"h": 47
-			},
-			"sourceSize": {
-				"w": 32,
-				"h": 47
-			}
-		},
-		"boss-back-step1.png": {
-			"frame": {
-				"x": 103,
-				"y": 1,
-				"w": 32,
-				"h": 47
-			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 32,
-				"h": 47
-			},
-			"sourceSize": {
-				"w": 32,
-				"h": 47
+				"h": 34
 			}
 		},
 		"boss-back-step2.png": {
 			"frame": {
-				"x": 137,
+				"x": 35,
 				"y": 1,
 				"w": 32,
-				"h": 47
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
@@ -93,19 +33,19 @@
 				"x": 0,
 				"y": 0,
 				"w": 32,
-				"h": 47
+				"h": 34
 			},
 			"sourceSize": {
 				"w": 32,
-				"h": 47
+				"h": 34
 			}
 		},
 		"boss-back-step3.png": {
 			"frame": {
-				"x": 1,
-				"y": 50,
+				"x": 69,
+				"y": 1,
 				"w": 32,
-				"h": 47
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
@@ -113,19 +53,19 @@
 				"x": 0,
 				"y": 0,
 				"w": 32,
-				"h": 47
+				"h": 34
 			},
 			"sourceSize": {
 				"w": 32,
-				"h": 47
+				"h": 34
 			}
 		},
 		"boss-forward-step1.png": {
 			"frame": {
-				"x": 35,
-				"y": 50,
+				"x": 103,
+				"y": 1,
 				"w": 32,
-				"h": 48
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
@@ -133,19 +73,19 @@
 				"x": 0,
 				"y": 0,
 				"w": 32,
-				"h": 48
+				"h": 34
 			},
 			"sourceSize": {
 				"w": 32,
-				"h": 48
+				"h": 34
 			}
 		},
 		"boss-forward-step2.png": {
 			"frame": {
-				"x": 69,
-				"y": 50,
+				"x": 1,
+				"y": 37,
 				"w": 32,
-				"h": 48
+				"h": 35
 			},
 			"rotated": false,
 			"trimmed": false,
@@ -153,19 +93,19 @@
 				"x": 0,
 				"y": 0,
 				"w": 32,
-				"h": 48
+				"h": 35
 			},
 			"sourceSize": {
 				"w": 32,
-				"h": 48
+				"h": 35
 			}
 		},
 		"boss-forward-step3.png": {
 			"frame": {
-				"x": 103,
-				"y": 50,
+				"x": 35,
+				"y": 37,
 				"w": 32,
-				"h": 48
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
@@ -173,119 +113,139 @@
 				"x": 0,
 				"y": 0,
 				"w": 32,
-				"h": 48
+				"h": 34
 			},
 			"sourceSize": {
 				"w": 32,
-				"h": 48
+				"h": 34
 			}
 		},
 		"boss-left-step1.png": {
 			"frame": {
-				"x": 137,
-				"y": 50,
-				"w": 32,
-				"h": 48
+				"x": 69,
+				"y": 37,
+				"w": 22,
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 32,
-				"h": 48
+				"w": 22,
+				"h": 34
 			},
 			"sourceSize": {
-				"w": 32,
-				"h": 48
+				"w": 22,
+				"h": 34
 			}
 		},
 		"boss-left-step2.png": {
 			"frame": {
-				"x": 1,
-				"y": 100,
-				"w": 32,
-				"h": 48
+				"x": 93,
+				"y": 37,
+				"w": 22,
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 32,
-				"h": 48
+				"w": 22,
+				"h": 34
 			},
 			"sourceSize": {
-				"w": 32,
-				"h": 48
+				"w": 22,
+				"h": 34
 			}
 		},
 		"boss-left-step3.png": {
 			"frame": {
-				"x": 35,
-				"y": 100,
-				"w": 32,
-				"h": 48
+				"x": 117,
+				"y": 37,
+				"w": 22,
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 32,
-				"h": 48
+				"w": 22,
+				"h": 34
 			},
 			"sourceSize": {
-				"w": 32,
-				"h": 48
+				"w": 22,
+				"h": 34
 			}
 		},
 		"boss-right-step1.png": {
 			"frame": {
-				"x": 69,
-				"y": 100,
-				"w": 32,
-				"h": 48
+				"x": 35,
+				"y": 73,
+				"w": 22,
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 32,
-				"h": 48
+				"w": 22,
+				"h": 34
 			},
 			"sourceSize": {
-				"w": 32,
-				"h": 48
+				"w": 22,
+				"h": 34
 			}
 		},
 		"boss-right-step2.png": {
 			"frame": {
-				"x": 103,
-				"y": 100,
-				"w": 32,
-				"h": 48
+				"x": 59,
+				"y": 73,
+				"w": 22,
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 32,
-				"h": 48
+				"w": 22,
+				"h": 34
 			},
 			"sourceSize": {
-				"w": 32,
-				"h": 48
+				"w": 22,
+				"h": 34
 			}
 		},
 		"boss-right-step3.png": {
 			"frame": {
-				"x": 137,
-				"y": 100,
+				"x": 83,
+				"y": 73,
+				"w": 22,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 34
+			}
+		},
+		"enemy-back-step1.png": {
+			"frame": {
+				"x": 107,
+				"y": 73,
 				"w": 32,
-				"h": 48
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
@@ -293,19 +253,19 @@
 				"x": 0,
 				"y": 0,
 				"w": 32,
-				"h": 48
+				"h": 34
 			},
 			"sourceSize": {
 				"w": 32,
-				"h": 48
+				"h": 34
 			}
 		},
-		"forward-step1.png": {
+		"enemy-back-step2.png": {
 			"frame": {
 				"x": 1,
-				"y": 150,
+				"y": 109,
 				"w": 32,
-				"h": 48
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
@@ -313,19 +273,19 @@
 				"x": 0,
 				"y": 0,
 				"w": 32,
-				"h": 48
+				"h": 34
 			},
 			"sourceSize": {
 				"w": 32,
-				"h": 48
+				"h": 34
 			}
 		},
-		"forward-step2.png": {
+		"enemy-back-step3.png": {
 			"frame": {
 				"x": 35,
-				"y": 150,
+				"y": 109,
 				"w": 32,
-				"h": 48
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
@@ -333,19 +293,19 @@
 				"x": 0,
 				"y": 0,
 				"w": 32,
-				"h": 48
+				"h": 34
 			},
 			"sourceSize": {
 				"w": 32,
-				"h": 48
+				"h": 34
 			}
 		},
-		"forward-step3.png": {
+		"enemy-forward-step1.png": {
 			"frame": {
 				"x": 69,
-				"y": 150,
+				"y": 109,
 				"w": 32,
-				"h": 48
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
@@ -353,19 +313,19 @@
 				"x": 0,
 				"y": 0,
 				"w": 32,
-				"h": 48
+				"h": 34
 			},
 			"sourceSize": {
 				"w": 32,
-				"h": 48
+				"h": 34
 			}
 		},
-		"left-step1.png": {
+		"enemy-forward-step2.png": {
 			"frame": {
 				"x": 103,
-				"y": 150,
+				"y": 109,
 				"w": 32,
-				"h": 48
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
@@ -373,39 +333,19 @@
 				"x": 0,
 				"y": 0,
 				"w": 32,
-				"h": 48
+				"h": 34
 			},
 			"sourceSize": {
 				"w": 32,
-				"h": 48
+				"h": 34
 			}
 		},
-		"left-step2.png": {
+		"enemy-forward-step3.png": {
 			"frame": {
 				"x": 137,
-				"y": 150,
-				"w": 32,
-				"h": 48
-			},
-			"rotated": false,
-			"trimmed": false,
-			"spriteSourceSize": {
-				"x": 0,
-				"y": 0,
-				"w": 32,
-				"h": 48
-			},
-			"sourceSize": {
-				"w": 32,
-				"h": 48
-			}
-		},
-		"left-step3.png": {
-			"frame": {
-				"x": 171,
 				"y": 1,
 				"w": 32,
-				"h": 48
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
@@ -413,71 +353,131 @@
 				"x": 0,
 				"y": 0,
 				"w": 32,
-				"h": 48
+				"h": 34
 			},
 			"sourceSize": {
 				"w": 32,
-				"h": 48
+				"h": 34
 			}
 		},
-		"right-step1.png": {
+		"enemy-left-step1.png": {
 			"frame": {
-				"x": 171,
-				"y": 51,
-				"w": 32,
-				"h": 48
+				"x": 141,
+				"y": 37,
+				"w": 22,
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 32,
-				"h": 48
+				"w": 22,
+				"h": 34
 			},
 			"sourceSize": {
-				"w": 32,
-				"h": 48
+				"w": 22,
+				"h": 34
 			}
 		},
-		"right-step2.png": {
+		"enemy-left-step2.png": {
 			"frame": {
-				"x": 171,
-				"y": 101,
-				"w": 32,
-				"h": 48
+				"x": 165,
+				"y": 37,
+				"w": 22,
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 32,
-				"h": 48
+				"w": 22,
+				"h": 34
 			},
 			"sourceSize": {
-				"w": 32,
-				"h": 48
+				"w": 22,
+				"h": 34
 			}
 		},
-		"right-step3.png": {
+		"enemy-left-step3.png": {
 			"frame": {
-				"x": 171,
-				"y": 151,
-				"w": 32,
-				"h": 48
+				"x": 141,
+				"y": 73,
+				"w": 22,
+				"h": 34
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 32,
-				"h": 48
+				"w": 22,
+				"h": 34
 			},
 			"sourceSize": {
-				"w": 32,
-				"h": 48
+				"w": 22,
+				"h": 34
+			}
+		},
+		"enemy-right-step1.png": {
+			"frame": {
+				"x": 165,
+				"y": 73,
+				"w": 22,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 34
+			}
+		},
+		"enemy-right-step2.png": {
+			"frame": {
+				"x": 137,
+				"y": 109,
+				"w": 22,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 34
+			}
+		},
+		"enemy-right-step3.png": {
+			"frame": {
+				"x": 161,
+				"y": 109,
+				"w": 22,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 34
 			}
 		}
 	},
@@ -487,8 +487,8 @@
 		"image": "spritesheet.png",
 		"format": "RGBA8888",
 		"size": {
-			"w": 204,
-			"h": 200
+			"w": 188,
+			"h": 144
 		},
 		"scale": "1"
 	}

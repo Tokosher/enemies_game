@@ -1,6 +1,7 @@
 export class Constants {
     public static WIDTH = 600;
     public static HEIGHT = 600;
+    public static BACKGROUND_COLOR = 0x1099bb;
 
     public static ANIMATION_STEP_AMOUNT = 3;
     public static ANIMATION_SPEED = 0.1;
@@ -10,4 +11,10 @@ export class Constants {
         fontName: 'Desyrel',
         fontSize: 50,
     };
+}
+
+export const REQUIRED_DATA_FOR_LOADER = {
+    'tileset': './assets/img/spritesheet.json',
+    'background': './assets/background.png',
+    'Desyrel': './assets/fonts/desyrel.xml'
 }

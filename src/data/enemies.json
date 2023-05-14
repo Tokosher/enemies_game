@@ -1,5 +1,5 @@
 [
-  { "name": "enemy",
+  { "name": "boss",
     "components": [
       { "name": "direction", "value": "forward" }
     ],
@@ -9,7 +9,7 @@
       "y": 130
     }
   },
-  { "name": "enemy",
+  { "name": "boss",
     "components": [
       { "name": "direction", "value": "back" }
     ],

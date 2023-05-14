@@ -2,33 +2,26 @@ import * as PIXI from 'pixi.js';
 import gsap from 'gsap';
 import {Character, CharacterData, EnemyComponentData} from "./character";
 import {Constants} from "../utils/utils";
+import { Container } from 'pixi.js';
 
 // todo review all function return values
 
 type Directions = 'forward' | 'right' | 'back' | 'left';
 // left forward bug
 export class Enemy extends Character {
-    protected forwardMotionAnimationPack: PIXI.Texture[] = [];
-    protected rightMotionAnimationPack: PIXI.Texture[] = [];
-    protected backMotionAnimationPack: PIXI.Texture[] = [];
-    protected leftMotionAnimationPack: PIXI.Texture[] = [];
 
-    protected character: PIXI.AnimatedSprite;
     protected currentDirection: Directions;
     protected movingRange: number;
     protected tween: gsap.core.Tween;
 
     constructor(data: CharacterData) {
         super();
-        const { components, position, movingRange } = data;
+        const { position, movingRange } = data;
 
         this.movingRange = movingRange;
         this.positionCharacter(position);
-        this.createCharacter(components);
+        this.createCharacter(data);
     }
-
-    // todo не нравится, что тут текстур фром кастомные имена вручную пишутся, передать префикс лучше и тут будет основная часть
-    // todo подумать может вынести в класс Керектер
 
     public kill () {
         this.forwardMotionAnimationPack = null;
@@ -40,21 +33,10 @@ export class Enemy extends Character {
         this.tween = null;
     }
 
-    protected createCharacter (data: CharacterData["components"]) {
-        for (let i = 0; i < Constants.ANIMATION_STEP_AMOUNT; i++) {
-            this.forwardMotionAnimationPack.push(PIXI.Texture.from(`forward-step${i+1}.png`))
-            this.rightMotionAnimationPack.push(PIXI.Texture.from(`right-step${i+1}.png`))
-            this.leftMotionAnimationPack.push(PIXI.Texture.from(`left-step${i+1}.png`))
-            this.backMotionAnimationPack.push(PIXI.Texture.from(`back-step${i+1}.png`))
-        }
+    protected createCharacter (data: CharacterData) {
+        super.createCharacter(data);
 
-        this.character = new PIXI.AnimatedSprite(this.forwardMotionAnimationPack); // we should add any pack
-        this.character.scale.set(2, 2); // todo remove
-        this.addChild(this.character);
-
-        this.character.animationSpeed = Constants.ANIMATION_SPEED;
-
-        data.forEach(property => {
+        data.components.forEach(property => {
             switch (property.name) {
                 case 'direction':
                     this.makeDirectionAnimation(property.value as Directions);
