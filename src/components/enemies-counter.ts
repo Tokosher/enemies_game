@@ -1,7 +1,6 @@
-import { Container } from "pixi.js";
-import { Constants, PositionData } from '../utils/utils';
-import { BaseVisualElement } from './base-visual-element';
 import * as PIXI from 'pixi.js';
+import { Constants } from '../utils/utils';
+import { BaseVisualElement } from './base-visual-element';
 
 export type CounterPosition = 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight';
 

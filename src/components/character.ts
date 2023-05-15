@@ -2,16 +2,17 @@ import { Constants, PositionData } from '../utils/utils';
 import * as PIXI from 'pixi.js';
 import { BaseVisualElement } from './base-visual-element';
 // todo дать возможность задать анимку разную по скорости для каждого перса и скейл добавить тоже для перса
+
+export type Directions = 'forward' | 'right' | 'back' | 'left';
+
 export interface CharacterData {
     name: 'boss' | 'enemy',
-    components: Array<CharacterComponentData>,
+    direction: Directions,
     movingRange: number,
+    scale: number, // for both: x and y
+    animationSpeed: number,
+    animationDuration: number;
     position: PositionData
-}
-
-type CharacterComponentData = {
-    name: string,
-    value: string | number
 }
 
 export abstract class Character extends BaseVisualElement {
@@ -28,7 +29,7 @@ export abstract class Character extends BaseVisualElement {
      * @protected
      */
     protected createCharacter (data: CharacterData): void {
-        const prefix = data.name;
+        const { name: prefix, animationSpeed, scale } = data;
 
         for (let i = 0; i < Constants.ANIMATION_STEP_AMOUNT; i++) {
             this.forwardMotionAnimationPack.push(PIXI.Texture.from(`${prefix}-forward-step${i+1}.png`))
@@ -38,8 +39,9 @@ export abstract class Character extends BaseVisualElement {
         }
 
         this.character = new PIXI.AnimatedSprite(this.forwardMotionAnimationPack); // we should add any pack for success creating AnimatedSprite
+        this.character.scale.set(scale, scale);
         this.addChild(this.character);
 
-        this.character.animationSpeed = Constants.ANIMATION_SPEED;
+        this.character.animationSpeed = animationSpeed;
     }
 }

@@ -1,7 +1,5 @@
 import * as PIXI from 'pixi.js';
-import { Constants } from '../../utils/utils';
 import { Enemy } from '../enemy';
-
 
 interface EnemiesControllerInterface {
   app: PIXI.Application,

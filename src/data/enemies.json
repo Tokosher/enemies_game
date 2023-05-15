@@ -1,41 +1,134 @@
 [
-  { "name": "boss",
-    "components": [
-      { "name": "direction", "value": "forward" }
-    ],
+  { "name": "enemy",
+    "direction": "forward",
     "movingRange": 150,
+    "scale": 1.5,
+    "animationSpeed": 0.1,
+    "animationDuration": 1.5,
+    "position": {
+      "x": 50,
+      "y": 160
+    }
+  },
+  { "name": "enemy",
+    "direction": "back",
+    "movingRange": 150,
+    "scale": 1.5,
+    "animationSpeed": 0.1,
+    "animationDuration": 1.5,
     "position": {
       "x": 100,
-      "y": 130
+      "y": 20
+    }
+  },
+  {
+    "name": "enemy",
+    "direction": "forward",
+    "movingRange": 150,
+    "scale": 1.5,
+    "animationSpeed": 0.1,
+    "animationDuration": 1.5,
+    "position": {
+      "x": 150,
+      "y": 160
     }
   },
   { "name": "boss",
-    "components": [
-      { "name": "direction", "value": "back" }
-    ],
-    "movingRange": 150,
+    "direction": "back",
+    "movingRange": 350,
+    "scale": 2,
+    "animationSpeed": 0.2,
+    "animationDuration": 2,
     "position": {
-      "x": 100,
+      "x": 250,
+      "y": 120
+    }
+  },
+  { "name": "enemy",
+    "direction": "right",
+    "movingRange": 130,
+    "scale": 1.5,
+    "animationSpeed": 0.1,
+    "animationDuration": 1,
+    "position": {
+      "x": 10,
       "y": 300
     }
   },
-  { "name": "enemy",
-    "components": [
-      { "name": "direction", "value": "right" }
-    ],
-    "movingRange": 100,
+  { "name": "boss",
+    "direction": "right",
+    "movingRange": 130,
+    "scale": 1.8,
+    "animationSpeed": 0.1,
+    "animationDuration": 1.5,
     "position": {
-      "x": 350,
-      "y": 130
+      "x": 10,
+      "y": 430
     }
   },
   { "name": "enemy",
-    "components": [
-      { "name": "direction", "value": "left" }
-    ],
+    "direction": "left",
     "movingRange": 100,
+    "scale": 1.8,
+    "animationSpeed": 0.1,
+    "animationDuration": 1,
     "position": {
-      "x": 350,
+      "x": 190,
+      "y": 500
+    }
+  },
+  { "name": "enemy",
+    "direction": "right",
+    "movingRange": 160,
+    "scale": 1.5,
+    "animationSpeed": 0.1,
+    "animationDuration": 1.5,
+    "position": {
+      "x": 390,
+      "y": 150
+    }
+  },
+  { "name": "boss",
+    "direction": "right",
+    "movingRange": 130,
+    "scale": 1.6,
+    "animationSpeed": 0.1,
+    "animationDuration": 1.5,
+    "position": {
+      "x": 390,
+      "y": 75
+    }
+  },
+  { "name": "boss",
+    "direction": "right",
+    "movingRange": 130,
+    "scale": 1.6,
+    "animationSpeed": 0.3,
+    "animationDuration": 0.8,
+    "position": {
+      "x": 390,
+      "y": 375
+    }
+  },
+  { "name": "enemy",
+    "direction": "left",
+    "movingRange": 150,
+    "scale": 1.6,
+    "animationSpeed": 0.15,
+    "animationDuration": 1,
+    "position": {
+      "x": 500,
+      "y": 475
+    }
+  },
+  { "name": "enemy",
+    "direction": "left",
+    "movingRange": 130,
+    "scale": 1.6,
+    "animationSpeed": 0.12,
+    "animationDuration": 1,
+    "position": {
+      "x": 550,
       "y": 300
     }
   }

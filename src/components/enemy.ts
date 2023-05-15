@@ -1,19 +1,15 @@
 import gsap from 'gsap';
-import { Character, CharacterData } from './character';
+import { Character, CharacterData, Directions } from './character';
 import { Constants } from '../utils/utils';
-
-type Directions = 'forward' | 'right' | 'back' | 'left';
 
 export class Enemy extends Character {
     protected currentDirection: Directions;
-    protected movingRange: number;
     protected tween: gsap.core.Tween;
 
     constructor(data: CharacterData) {
         super();
-        const { position, movingRange } = data;
+        const { position } = data;
 
-        this.movingRange = movingRange;
         this.onPosition(position);
         this.createCharacter(data);
     }
@@ -31,23 +27,19 @@ export class Enemy extends Character {
     protected createCharacter (data: CharacterData): void {
         super.createCharacter(data);
 
-        data.components.forEach(property => {
-            switch (property.name) {
-                case 'direction':
-                    this.makeDirectionAnimation(property.value as Directions);
-                    break;
-            }
-        })
+        this.makeDirectionAnimation(data);
     }
 
-    protected makeDirectionAnimation (value: Directions): void {
-        this.changeDirection(value);
+    protected makeDirectionAnimation (characterData: CharacterData): void {
+        const { direction, movingRange, animationDuration } = characterData;
 
-        switch (value) {
+        this.changeDirection(direction);
+
+        switch (direction) {
             case 'forward':
                 this.tween = gsap.to(this, {
-                    y: this.y -  this.movingRange,
-                    duration: Constants.ANIMATION_DURATION,
+                    y: this.y - movingRange,
+                    duration: animationDuration,
                     ease: "none",
                     repeat: -1,
                     yoyo: true,
@@ -60,8 +52,8 @@ export class Enemy extends Character {
 
             case 'right':
                 this.tween = gsap.to(this, {
-                    x: this.x + this.movingRange,
-                    duration: Constants.ANIMATION_DURATION,
+                    x: this.x + movingRange,
+                    duration: animationDuration,
                     ease: "none",
                     repeat: -1,
                     yoyo: true,
@@ -73,8 +65,8 @@ export class Enemy extends Character {
 
             case 'back':
                 this.tween = gsap.to(this, {
-                    y: this.y + this.movingRange,
-                    duration: Constants.ANIMATION_DURATION,
+                    y: this.y + movingRange,
+                    duration: animationDuration,
                     ease: "none",
                     repeat: -1,
                     yoyo: true,
@@ -86,8 +78,8 @@ export class Enemy extends Character {
 
             case 'left':
                 this.tween = gsap.to(this, {
-                    x: this.x - this.movingRange,
-                    duration: Constants.ANIMATION_DURATION,
+                    x: this.x - movingRange,
+                    duration: animationDuration,
                     ease: "none",
                     repeat: -1,
                     yoyo: true,
