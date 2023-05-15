@@ -1,6 +1,5 @@
 import gsap from 'gsap';
 import { Character, CharacterData, Directions } from './character';
-import { Constants } from '../utils/utils';
 
 export class Enemy extends Character {
     protected currentDirection: Directions;
@@ -20,6 +19,7 @@ export class Enemy extends Character {
         this.backMotionAnimationPack = null;
         this.leftMotionAnimationPack = null;
         this.character = null;
+
         this.tween.kill();
         this.tween = null;
     }

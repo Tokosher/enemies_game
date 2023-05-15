@@ -10,7 +10,6 @@ interface CounterDataInterface {
   position: CounterPosition;
 }
 
-// todo test it
 export class Counter extends BaseVisualElement {
   protected prefix: CounterDataInterface['prefix'];
 

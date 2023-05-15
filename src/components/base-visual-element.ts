@@ -8,6 +8,7 @@ export abstract class BaseVisualElement extends Container {
     if (x || x === 0) {
       this.x = x;
     }
+
     if (y || y === 0) {
       this.y = y;
     }

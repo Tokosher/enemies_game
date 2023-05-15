@@ -4,11 +4,11 @@ import { Enemy } from './components/enemy';
 import { EnemiesController } from './components/controllers/enemies-controller';
 import { REQUIRED_DATA_FOR_LOADER } from './utils/utils'
 import { Counter } from './components/enemies-counter';
-// todo чекнуть импорты
+
 const app = createApplication();
 document.body.appendChild(app.view);
 
-// getting base setup data
+// getting base data
 const enemiesData = require('./data/enemies.json');
 
 // Loader settings

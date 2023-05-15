@@ -1,7 +1,6 @@
 import { Constants, PositionData } from '../utils/utils';
 import * as PIXI from 'pixi.js';
 import { BaseVisualElement } from './base-visual-element';
-// todo дать возможность задать анимку разную по скорости для каждого перса и скейл добавить тоже для перса
 
 export type Directions = 'forward' | 'right' | 'back' | 'left';
 
