@@ -1,0 +1,495 @@
+{
+	"frames": {
+		"boss-back-step1.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 32,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 32,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 32,
+				"h": 34
+			}
+		},
+		"boss-back-step2.png": {
+			"frame": {
+				"x": 35,
+				"y": 1,
+				"w": 32,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 32,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 32,
+				"h": 34
+			}
+		},
+		"boss-back-step3.png": {
+			"frame": {
+				"x": 69,
+				"y": 1,
+				"w": 32,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 32,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 32,
+				"h": 34
+			}
+		},
+		"boss-forward-step1.png": {
+			"frame": {
+				"x": 103,
+				"y": 1,
+				"w": 32,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 32,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 32,
+				"h": 34
+			}
+		},
+		"boss-forward-step2.png": {
+			"frame": {
+				"x": 1,
+				"y": 37,
+				"w": 32,
+				"h": 35
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 32,
+				"h": 35
+			},
+			"sourceSize": {
+				"w": 32,
+				"h": 35
+			}
+		},
+		"boss-forward-step3.png": {
+			"frame": {
+				"x": 35,
+				"y": 37,
+				"w": 32,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 32,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 32,
+				"h": 34
+			}
+		},
+		"boss-left-step1.png": {
+			"frame": {
+				"x": 69,
+				"y": 37,
+				"w": 22,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 34
+			}
+		},
+		"boss-left-step2.png": {
+			"frame": {
+				"x": 93,
+				"y": 37,
+				"w": 22,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 34
+			}
+		},
+		"boss-left-step3.png": {
+			"frame": {
+				"x": 117,
+				"y": 37,
+				"w": 22,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 34
+			}
+		},
+		"boss-right-step1.png": {
+			"frame": {
+				"x": 35,
+				"y": 73,
+				"w": 22,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 34
+			}
+		},
+		"boss-right-step2.png": {
+			"frame": {
+				"x": 59,
+				"y": 73,
+				"w": 22,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 34
+			}
+		},
+		"boss-right-step3.png": {
+			"frame": {
+				"x": 83,
+				"y": 73,
+				"w": 22,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 34
+			}
+		},
+		"enemy-back-step1.png": {
+			"frame": {
+				"x": 107,
+				"y": 73,
+				"w": 32,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 32,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 32,
+				"h": 34
+			}
+		},
+		"enemy-back-step2.png": {
+			"frame": {
+				"x": 1,
+				"y": 109,
+				"w": 32,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 32,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 32,
+				"h": 34
+			}
+		},
+		"enemy-back-step3.png": {
+			"frame": {
+				"x": 35,
+				"y": 109,
+				"w": 32,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 32,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 32,
+				"h": 34
+			}
+		},
+		"enemy-forward-step1.png": {
+			"frame": {
+				"x": 69,
+				"y": 109,
+				"w": 32,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 32,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 32,
+				"h": 34
+			}
+		},
+		"enemy-forward-step2.png": {
+			"frame": {
+				"x": 103,
+				"y": 109,
+				"w": 32,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 32,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 32,
+				"h": 34
+			}
+		},
+		"enemy-forward-step3.png": {
+			"frame": {
+				"x": 137,
+				"y": 1,
+				"w": 32,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 32,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 32,
+				"h": 34
+			}
+		},
+		"enemy-left-step1.png": {
+			"frame": {
+				"x": 141,
+				"y": 37,
+				"w": 22,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 34
+			}
+		},
+		"enemy-left-step2.png": {
+			"frame": {
+				"x": 165,
+				"y": 37,
+				"w": 22,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 34
+			}
+		},
+		"enemy-left-step3.png": {
+			"frame": {
+				"x": 141,
+				"y": 73,
+				"w": 22,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 34
+			}
+		},
+		"enemy-right-step1.png": {
+			"frame": {
+				"x": 165,
+				"y": 73,
+				"w": 22,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 34
+			}
+		},
+		"enemy-right-step2.png": {
+			"frame": {
+				"x": 137,
+				"y": 109,
+				"w": 22,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 34
+			}
+		},
+		"enemy-right-step3.png": {
+			"frame": {
+				"x": 161,
+				"y": 109,
+				"w": 22,
+				"h": 34
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 34
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 34
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 188,
+			"h": 144
+		},
+		"scale": "1"
+	}
+}
